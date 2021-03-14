@@ -1,20 +1,32 @@
 <template>
     <div class="home">
-        <h1>Home</h1>
-        <p>{{ msg }}</p>
+        <navbar-menu/>
     </div>
 </template>
 
 <script>
+import Navbar from "@/components/Menu/Navbar"
+
 export default {
     name: 'Home',
-    data () {
-        return {
-            msg: 'Welcome to Your Vue.js App'
-        }
+    components: {
+        'navbar-menu': Navbar,
     }
 }
 </script>
 
 <style scoped>
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 24px;
+}
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
 </style>
