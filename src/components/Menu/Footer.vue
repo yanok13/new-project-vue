@@ -7,8 +7,8 @@
                 <li><a href="#">Миссия сайта</a></li>
                 <li><a href="#">Пользовательское соглашение</a></li>
                 <li><a href="#">Политика обработки персональных данных</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Правила</a></li>
+                <li><router-link to="/faq">FAQ</router-link></li>
+                <li><router-link to="/regulations">Правила</router-link></li>
                 <li><a href="#">Реклама на сайте</a></li>
             </ul>
             <div class="social-links flex">
@@ -31,22 +31,30 @@
         </div>
         <div class="copyright">
             <p>&#169;2009-2021 Книга Фанфиков</p>
-            <p>Права на все произведения, опубликованные на сайте, принадлежат авторам произведений. Администрация не несет ответственности за содержание работ.</p>
+            <p class="marg-bot-null">Права на все произведения, опубликованные на сайте, принадлежат авторам произведений. Администрация не несет ответственности за содержание работ.</p>
         </div>
     </div>
 </template>
 
 <script>
+import FAQ from "@/components/PagesHeader/FAQ"
+import Regulations from "@/components/PagesHeader/Regulations"
+
 export default {
-    
+    components: {
+        'faq-page': FAQ,
+        'regulations-page': Regulations,
+    }
 }
 </script>
 
 <style scoped>
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
+
 .footer-block {
     background-color: #4f2d01;
+    padding: 40px 0px;
 }
 
 .bottom-menu {
@@ -95,5 +103,9 @@ ul a:hover {
 .copyright {
     text-align: center;
     color: #c69e6b;
+}
+
+.marg-bot-null {
+    margin-bottom: 0;
 }
 </style>

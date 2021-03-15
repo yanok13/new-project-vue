@@ -27,8 +27,9 @@
 </template>
 
 <script>
+
 export default{
-    
+
 }
 </script>
 
@@ -39,6 +40,7 @@ export default{
     font-weight: 500;
     justify-content: space-evenly;
     align-items: center;
+    padding: 15px 0px; 
 }
 
 .flex {

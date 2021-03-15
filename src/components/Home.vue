@@ -7,10 +7,12 @@
 <script>
 import Navbar from "@/components/Menu/Navbar"
 
+
 export default {
     name: 'Home',
     components: {
         'navbar-menu': Navbar,
+        
     }
 }
 </script>
