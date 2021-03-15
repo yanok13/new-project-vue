@@ -4,7 +4,7 @@
             <li><a href="/"><i class="fa fa-home fa-1x"></i></a></li>
             <li><a href="#">Фанфики</a></li>
             <li><a href="#">Авторы</a></li>
-            <li><a href="#"><i class="fa fa-plus-circle"></i> Добавить фанфик</a></li>
+            <li @click="addBook"><a href="#"><i class="fa fa-plus-circle"></i>Добавить фанфик</a></li>
         </ul>
         <div class="social-links flex">
             <div class="social vk">
@@ -30,8 +30,12 @@
 
 export default{
     components: {
-        
-        
+   
+    },
+    methods: {
+        addBook() {
+            this.$emit('addBook')
+        }
     }
 }
 </script>
