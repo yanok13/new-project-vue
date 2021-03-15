@@ -26,7 +26,7 @@
                     </h2>
                     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                        <p>«Книга Фанфиков» — сайт, созданный для того, чтобы авторам фанфиков и читателям было проще найти друг друга. Каждый может выставить у нас свою работу и прочитать тысячи текстов, выставленных другими. У сайта также есть миссия, которой создатели и пользователи стараются придерживаться.</p>
+                        <p>«Книга Фанфиков» — сайт, созданный для того, чтобы авторам фанфиков и читателям было проще найти друг друга. Каждый может выставить у нас свою работу и прочитать тысячи текстов, выставленных другими. У сайта также есть <router-link to="/mission">миссия</router-link>, которой создатели и пользователи стараются придерживаться.</p>
                     </div>
                     </div>
                 </div>
@@ -118,10 +118,12 @@
 
 <script>
 import Navbar from "@/components/Menu/Navbar"
+import Mission from "@/components/PagesFooter/Mission"
+
 export default {
     components: {
         'navbar-menu': Navbar,
-        
+        'mission-site': Mission,
     },
 }
 </script>

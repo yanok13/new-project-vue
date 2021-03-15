@@ -1,15 +1,12 @@
 <template>
     <div class="footer-block">
-        <div class="flex">
+        <div class="flex nav-footer">
             <ul class="flex bottom-menu">
-                <li><a href="#">Служба поддержки</a></li>
-                <li><a href="#">Новости сайта</a></li>
-                <li><a href="#">Миссия сайта</a></li>
-                <li><a href="#">Пользовательское соглашение</a></li>
-                <li><a href="#">Политика обработки персональных данных</a></li>
+                <li><router-link to="/mission">Миссия сайта</router-link></li>
+                <li><router-link to="/terms-use">Пользовательское соглашение</router-link></li>
+                <li><router-link to="/personal-policy">Политика обработки персональных данных</router-link></li>
                 <li><router-link to="/faq">FAQ</router-link></li>
                 <li><router-link to="/regulations">Правила</router-link></li>
-                <li><a href="#">Реклама на сайте</a></li>
             </ul>
             <div class="social-links flex">
                 <div class="social vk">
@@ -39,11 +36,17 @@
 <script>
 import FAQ from "@/components/PagesHeader/FAQ"
 import Regulations from "@/components/PagesHeader/Regulations"
+import Mission from "@/components/PagesFooter/Mission"
+import TermsOfUse from "@/components/PagesFooter/TermsOfUse"
+import PersonalPolicy from "@/components/PagesFooter/PersonalPolicy"
 
 export default {
     components: {
         'faq-page': FAQ,
         'regulations-page': Regulations,
+        'mission-site': Mission,
+        'terms-of-use': TermsOfUse,
+        'personal-policy': PersonalPolicy,
     }
 }
 </script>
@@ -63,6 +66,10 @@ export default {
 
 .flex {
     display: flex;
+}
+
+.nav-footer {
+    justify-content: space-evenly;
 }
 
 ul {
